@@ -1,5 +1,12 @@
 import React from 'react';
 class Addtask extends React.Component{
+    handleSubmit=(e)=>{
+        e.preventDefault()
+        /**recupération de la fonction onAddTask*/
+        this.props.onAddTask(this.newTask.value)
+        /**redirection vers la page des tâches */
+        this.props.history.push('/')
+    }
     render(){
         return(
             
